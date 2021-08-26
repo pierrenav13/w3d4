@@ -10,6 +10,7 @@ class MinesweeperGame
 
     def run
         board.print_grid
+        board.set_to_adjacent([0,0], 1)
     end
 
 end

@@ -1,5 +1,5 @@
 class Board
-    attr_reader :grid
+    attr_accessor :grid
 
     def initialize(size = 9)
         @grid = Array.new(size) {Array.new(size, '[ ]')}
@@ -16,7 +16,12 @@ class Board
             end
             puts row_string
         end
-        
+    end
+
+    def set_to_adjacent(pos, val)
+        x, y = pos
+        grid[x][y] = "[#{val}]"
+        self.print_grid
     end
 
 
